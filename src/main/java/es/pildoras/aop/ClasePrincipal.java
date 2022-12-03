@@ -13,7 +13,8 @@ public class ClasePrincipal {
 		ClienteDAO elCliente = contexto.getBean("clienteDAO", ClienteDAO.class);
 		ClienteVIPDAO elClienteVIP = contexto.getBean("clienteVIPDAO", ClienteVIPDAO.class);
 		//Llamar al método
-		elCliente.insertaCliente(); // Este es el nombre del metodo que debe coincidir con la anotación @Before
+		Cliente cl1 = new Cliente();
+		elCliente.insertaCliente(cl1, "Normal"); // Este es el nombre del metodo que debe coincidir con la anotación @Before
 		elClienteVIP.insertaClienteVIP(); // Este es el nombre del metodo que debe coincidir con la anotación @Before
 		//Cerrar el contexto
 		contexto.close();
