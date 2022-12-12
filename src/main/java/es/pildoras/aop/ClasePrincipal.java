@@ -17,6 +17,11 @@ public class ClasePrincipal {
 		elCliente.insertaCliente(cl1, "Normal"); // Este es el nombre del metodo que debe coincidir con la anotación @Before
 		elClienteVIP.insertaClienteVIP(); // Este es el nombre del metodo que debe coincidir con la anotación @Before
 		//Cerrar el contexto
+		elCliente.setCodigoClienteNormal("56465465465");
+		elCliente.setValoracionClienteNormal("Positiva");
+
+		String codigoCl = elCliente.getCodigoClienteNormal();
+		String valoraCl = elCliente.getValoracionClienteNormal();
 		contexto.close();
 	}
 }
